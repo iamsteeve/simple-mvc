@@ -1,0 +1,31 @@
+<h2>Lista de tareas</h2>
+
+<table border="1">
+
+    <tr>
+
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Prioridad</th>
+        <th>Status</th>
+        <th>Acción</th>
+
+    </tr>
+
+    <?php foreach ($this->tasks as $task): ?>
+
+        <tr>
+
+            <td><?php echo $task["id"]; ?></td>
+            <td><?php echo $task["name"]; ?></td>
+            <td><?php echo $task["date"]; ?></td>
+            <td><?php echo $task["priority"]; ?></td>
+            <td><?php echo $task["status"]; ?></td>
+            <td><button>Editar</button> | <button>Eliminar</button></td>
+
+        </tr>
+
+    <?php endforeach; ?>
+
+</table>
