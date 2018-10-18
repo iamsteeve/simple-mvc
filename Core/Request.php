@@ -1,7 +1,10 @@
 <?php
+namespace Core;
+defined("APP_PATH") OR die("Acceso a denegado");
 
 /**
- *  Class Request: Handle of Request User
+ * Class Request
+ * @package Core
  */
 class Request {
 

@@ -3,30 +3,22 @@
  * / linux
  * \ windows
  */
-
+/**
+ * Archivos de configuración
+ * TODO: encontrar la mejor manera de cargar la configuración
+ */
 define("DS", DIRECTORY_SEPARATOR);
 define("ROOT", realpath(dirname(__FILE__)) . DS);
-define("APP_PATH", ROOT . "application" . DS);
-
-//Imprimir ruta del proyecto
-//echo ROOT;
-
+define("APP_PATH", ROOT . "Core" . DS);
 require_once(APP_PATH . "Config.php");
-require_once(APP_PATH . "Request.php");
-require_once(APP_PATH . "Bootstrap.php");
-require_once(APP_PATH . "Controller.php");
-require_once(APP_PATH . "Model.php");
-require_once(APP_PATH . "View.php");
-require_once(APP_PATH . "Database.php");
 
-//Comprobar que los archivos se estan cargando correctamente
-//echo "<pre>";print_r(get_required_files());
+require __DIR__ . '/vendor/autoload.php';
 
 /**
- * Run Application
+ * Ejecución de la aplicación en una instancia estática creando un nuevo objeto Request
  */
 try {
-    Bootstrap::run(new Request);
+    \Core\Bootstrap::run(new \Core\Request);
 } catch (Exception $e) {
     echo $e->getMessage();
 }
