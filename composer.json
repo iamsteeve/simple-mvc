@@ -4,5 +4,11 @@
       "Core\\" : "Core",
       "App\\": "App"
     }
+  },
+  "require-dev": {
+    "phpdocumentor/phpdocumentor": "dev-master"
+  },
+  "require": {
+    "ext-pdo": "*"
   }
 }
