@@ -1,11 +1,16 @@
 <?php
 namespace Core;
 defined("APP_PATH") OR die("Acceso a denegado");
+
 /**
  * Class Database
  * @package Core
  */
 class Database extends \PDO {
+
+    /**
+     * Database constructor.
+     */
     public function __construct(){
         parent::__construct(
             'mysql:host='.DB_HOST.';'.'dbname='.DB_NAME,

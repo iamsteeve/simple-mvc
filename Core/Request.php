@@ -1,4 +1,5 @@
 <?php
+
 namespace Core;
 defined("APP_PATH") OR die("Acceso a denegado");
 
@@ -8,10 +9,24 @@ defined("APP_PATH") OR die("Acceso a denegado");
  */
 class Request {
 
-    
+    /**
+     * @var string
+     */
     private $_controller;
+
+    /**
+     * @var string
+     */
     private $_method;
+    /**
+     * @var array
+     */
     private $_args;
+
+    /**
+     *
+     * Request constructor.
+     */
     public function __construct(){
         if (isset($_GET['url'])) {
 
@@ -33,12 +48,24 @@ class Request {
             $this->_args = array();
         }
     }
+
+    /**
+     * @return string
+     */
     public function getController(){
         return $this->_controller;
     }
+
+    /**
+     * @return string
+     */
     public function getMethod(){
         return $this->_method;
     }
+
+    /**
+     * @return array
+     */
     public function getArgs(){
         return $this->_args;
     }

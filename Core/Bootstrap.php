@@ -1,5 +1,6 @@
 <?php
 namespace Core;
+
 defined("APP_PATH") OR die("Acceso a denegado");
 
 /**
@@ -10,13 +11,13 @@ class Bootstrap {
 
     /**
      * NameSpace de los Controladores
-     * @var
+     * @var string
      */
     const NAMESPACE_CONTROLLERS = "\App\Controllers\\";
 
     /**
      * Carpeta de los Controladores
-     * @var
+     * @var string
      */
     const DIRECTORY_CONTROLLERS = ROOT."App".DS."Controllers".DS;
 

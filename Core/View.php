@@ -8,7 +8,15 @@ defined("APP_PATH") OR die("Acceso a denegado");
  */
 class View
 {
+    /**
+     * @var string
+     */
     private $_controller;
+
+    /**
+     * View constructor.
+     * @param Request $request
+     */
     public function __construct(Request $request){
         $this->_controller = $request->getController();
     }
